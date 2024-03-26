@@ -13,8 +13,8 @@
 
         <h2 align="center">NUESTROS INTEGRANTES</h2>
         <ul>
-            <li>Franco Núñez Acevedo - Director y Fundador</li>
-            <li>Alejandro Fuentes del Campo - Esclavo</li>
+            <li id="director">Franco Núñez Acevedo - Director y Fundador</li>
+            <li id="esclavo">Alejandro Fuentes del Campo - Esclavo</li>
         </ul>
         <h2 align="center">NUESTRAS SECCIONES DE AYUDA</h2>
         <div>
@@ -26,4 +26,13 @@
             <p style="vertical-align:middle; display: inline;"><a href="gatos.html">Gatos</a></p>
         </div>
     </body>
+
+    <script>
+        setInterval(() => {
+            var director = document.getElementById("director");
+            director.style.color = "rgb(" + Math.random()*255 + ",100,100)";
+            var esclavo = document.getElementById("esclavo");
+            esclavo.style.color = "rgb(" + Math.random()*255 + "," + Math.random()*255 + "," + Math.random()*255 + ")";
+        }, 100);
+    </script>
 </html>
