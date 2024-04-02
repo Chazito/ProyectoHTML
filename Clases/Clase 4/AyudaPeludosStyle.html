@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ayuda a un Peludo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            body{
+                background-color: rgb(54, 54, 54);
+                font-family: sans-serif;
+            }
+            #container{
+                display: flex;
+                height: 100%;
+            }
+            #sidebar{
+                padding-top: 50px;
+                width: 20%;
+                border: 1px solid white;
+            }
+            .sidebar-content{
+                color: rgb(206, 206, 206);
+                text-align: left;
+                padding-left: 20px;
+                margin-block: 5px;
+            }
+            #color-blocks-panel{
+                width: 80%;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                border: 1px solid white;
+            }
+            .color-blocks{
+                margin: 0px;
+                height: 25%;
+                width: 100%;
+                border: 1px solid red;
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            const windowHeight = window.innerHeight;
+            console.log("Window height: ", windowHeight);
+        </script>
+
+        <div id="container">
+            <div id="sidebar">
+                <h1 class="sidebar-content">Peludos</h1>
+                <p class="sidebar-content">Inicio</p>
+                <p class="sidebar-content">Nosotros</p>
+                <p class="sidebar-content">Perros</p>
+                <p class="sidebar-content">Gatos</p>
+                <p class="sidebar-content">Contacto</p>
+            </div>
+            <div id="color-blocks-panel">
+                <div class="color-blocks" style="background-color: cyan;">
+                    <h1> LOREM IPSUM</h1>
+                    <p> BLAH BLAHbahb asdbkasdahsb asbdhasb dah dha dha bdhadh abdh ab dhbahsdbajsbdja bdjabs dhja</p>
+                </div>
+                <div class="color-blocks" style="background-color: yellow;">
+                    <h1> LOREM IPSUM</h1>
+                    <p> BLAH BLAHbahb asdbkasdahsb asbdhasb dah dha dha bdhadh abdh ab dhbahsdbajsbdja bdjabs dhja</p>
+                </div>
+                <div class="color-blocks" style="background-color: green;">
+                    <h1> LOREM IPSUM</h1>
+                    <p> BLAH BLAHbahb asdbkasdahsb asbdhasb dah dha dha bdhadh abdh ab dhbahsdbajsbdja bdjabs dhja</p>
+                </div>
+                <div class="color-blocks" style="background-color: pink;">
+                    <h1> LOREM IPSUM</h1>
+                    <p> BLAH BLAHbahb asdbkasdahsb asbdhasb dah dha dha bdhadh abdh ab dhbahsdbajsbdja bdjabs dhja</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
