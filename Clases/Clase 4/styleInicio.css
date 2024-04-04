@@ -8,7 +8,7 @@ body{
 }
 #sidebar{
     width: 20vw;
-    height: 100vh;
+    min-height: 100vh;
     border: 1px solid white;
 }
 .sidebar-content{
@@ -21,7 +21,7 @@ a.sidebar-content:hover{
 }
 #color-blocks-panel{
     width: 80vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
     border: 1px solid white;
@@ -40,8 +40,8 @@ a.sidebar-content:hover{
 }
 .grid-container{
     display: grid;
-    width: auto;
-    height: auto;
-    grid-template-columns: 4;
-    grid-template-rows: min-content;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
 }
