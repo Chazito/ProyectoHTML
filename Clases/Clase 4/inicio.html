@@ -9,14 +9,9 @@
 
     </head>
     <body>
-        <script>
-            const windowHeight = window.innerHeight;
-            console.log("Window height: ", windowHeight);
-        </script>
-
         <div id="container">
             <div id="sidebar">
-                <h1 class="sidebar-content">Peludos</h1>
+                <h1 class="sidebar-content" id="titulo">Peludos</h1>
                 <p><a class="sidebar-content" href="inicio.html" style="text-decoration: none;">Inicio</a></p>
                 <p><a class="sidebar-content" href="nosotros.html" style="text-decoration: none;">Nosotros</a></p>
                 <p><a class="sidebar-content" href="perros.html" style="text-decoration: none;">Perros</a></p>
@@ -41,5 +36,32 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            var r = 0;
+            var g = 0;
+            var b = 0;
+            var increasing = true;
+
+            function rainbow(speed){
+                if (increasing) {
+                    if (r < 255) r+=speed;
+                    else if (g < 255) g+=speed;
+                    else if (b < 255) b+=speed;
+                    else increasing = false;
+                } else {
+                    if (b > 0) b-=speed;
+                    else if (g > 0) g-=speed;
+                    else if (r > 0) r-=speed;
+                    else increasing = true;
+                }
+            }
+
+            setInterval(()=>{
+                var title = document.getElementById("titulo");
+                rainbow(1);
+                title.style.color = "rgb("+r+","+g+","+b+")";
+            },10);
+        </script>
     </body>
 </html>
