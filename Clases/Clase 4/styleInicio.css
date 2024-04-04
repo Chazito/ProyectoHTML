@@ -5,28 +5,27 @@ body{
 }
 #container{
     display: flex;
-    min-height: 100%;
 }
 #sidebar{
-    padding-top: 50px;
-    width: 20%;
+    width: 20vw;
+    height: 100vh;
     border: 1px solid white;
 }
 .sidebar-content{
     color: rgb(206, 206, 206);
     text-align: left;
-    padding-left: 20px;
-    margin-block: 5px;
+    margin: 20px;
 }
-.sidebar-content:hover{
+a.sidebar-content:hover{
     color: white;
 }
 #color-blocks-panel{
-    width: 80%;
-    height: 100%;
+    width: 80vw;
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     border: 1px solid white;
+    background-color: rgb(247, 227, 207);
 }
 .color-blocks{
     margin: 0px;
@@ -34,4 +33,15 @@ body{
     width: 100%;
     border: 1px solid red;
     display: inline-block;
+}
+.article-block{ 
+    margin: 50px;
+    text-align: center;
+}
+.grid-container{
+    display: grid;
+    width: auto;
+    height: auto;
+    grid-template-columns: 4;
+    grid-template-rows: min-content;
 }
