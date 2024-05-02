@@ -15,31 +15,29 @@
                 var nombre = $("#itNombre").val();
                 var email = $("#itEmail").val();
                 var asunto = $("#itAsunto").val();
+                hideAllErrorMessages();
 
                 if(nombre == ""){
                     $("#mensaje1").fadeIn();
                     return false;
                 }
-                else{
-                    $("#mensaje1").fadeOut();
-                }
                 if(!expr.test(email)){
                     $("#mensaje2").fadeIn();
                     return false;
-                }
-                else{
-                    $("#mensaje2").fadeOut();
                 }
                 if(asunto == ""){
                     $("#mensaje3").fadeIn();
                     return false;
                 }
-                else{
-                    $("#mensaje3").fadeOut();
-                }
                 return true;
             })
         })
+
+        function hideAllErrorMessages(){
+            $("#mensaje1").fadeOut();
+            $("#mensaje2").fadeOut();
+            $("#mensaje3").fadeOut();
+        }
     </script>
 </head>
 <body>
