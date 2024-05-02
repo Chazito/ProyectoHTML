@@ -38,6 +38,15 @@
             $("#mensaje2").fadeOut();
             $("#mensaje3").fadeOut();
         }
+
+        var currentValue = 0;
+        setInterval(()=>{
+            currentValue += .02;
+            currentValue %= Math.PI * 2;
+            var newColor = 20+(20 * Math.sin(currentValue));
+            var background = $("body").css("background-color","rgb("+newColor+","+newColor+","+newColor+")");
+            //console.log($("body").css("background-color"));
+        },20)
     </script>
 </head>
 <body>
