@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from .models import Genero,Alumno
 
-# Create your views here.
 def index(request):
-    context = {}
-    return render(request, 'alumnos/index.html')
+    alumnos = Alumno.objects.all()
+    alumnos2 = Alumno.objects.raw("SELECT * FROM alumnos_alumno")
+    context = {"alumnos":alumnos, "alumnos2":alumnos2}
+    return render(request, 'alumnos/index.html', context)
