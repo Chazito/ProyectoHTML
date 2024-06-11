@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista alumnos</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Lista de alumnos</h1>
+    <br>
+
+    <button type="button">
+        <a href="{% url 'alumnosAdd' %}"> Agregar</a>
+    </button>
+
+    <div id="idMensajes">
+        {% if mensaje %}
+            {{mensaje}}
+        {% endif %}
+    </div>
+
+    <table>
+        {% if alumnos %}
+            <th>RUT</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Eliminar</th>
+            <th>Modificar</th>
+            {% for x in alumnos %}
+                <tr>
+                    <td>{{x.rut}}</td>
+                    <td>{{x.nombre}}</td>
+                    <td>{{x.apellido_paterno}}</td>
+                    <td><a href="{% url 'alumnos_del' pk=x.rut %}">Eliminar</a></td>
+                    <td><a href="{% url 'alumnos_findEdit' pk=x.rut %}">Modificar</a></td>
+                </tr>
+            {% endfor %}
+        {% endif %}
+    </table>
+
+    <script>
+        $(document).ready(function(){
+            $('#idMensajes').delay(2000).fadeOut("slow");
+        });
+    </script>
+</body>
+</html>

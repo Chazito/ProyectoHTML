@@ -22,4 +22,5 @@ urlpatterns = [
     path('hola/', views.index),
     path('admin/', admin.site.urls),
     path('alumnos/', include('alumnos.urls')),
+    path('chaosnews/',include('chaosnews.urls')),
 ]
